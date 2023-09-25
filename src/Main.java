@@ -30,19 +30,23 @@ public class Main {
         numberOfPartyMembers = Integer.parseInt(numberOfPartyMembersTemp);
         System.out.println(" ");
 
-        //Final receipt calculations
-        totalTipAmount = (bill * (tipPercentage /100));
+        //Final receipt calculations and rounding to correct decimal places
+        totalTipAmount = bill * ((double)tipPercentage /100);
+        String formattedTotalTipAmount = String.format("$%.2f", totalTipAmount);
         totalBillTip = bill + totalTipAmount;
+        String formattedTotalBillTip = String.format("$%.2f", totalBillTip);
         tipPerPerson = totalTipAmount / numberOfPartyMembers;
+        String formattedTipPerPerson = String.format("$%.2f", tipPerPerson);
         totalPerPerson = totalBillTip / numberOfPartyMembers;
+        String formattedTotalPerPerson = String.format("$%.2f", totalPerPerson);
 
         //Receipt/output print]
         System.out.println("Based on the data provided, your new receipt is: " );
         System.out.println("_________________________________________________\n");
-        System.out.println("Total Tip: " + totalTipAmount + '\n');
-        System.out.println("Total Bill Including Tip: " + totalBillTip + '\n');
-        System.out.println("Amount of Tip per Person: " + tipPerPerson + '\n');
-        System.out.println("Total Bill with Tip per person: " + totalPerPerson);
+        System.out.println("Total Tip: " + formattedTotalTipAmount + '\n');
+        System.out.println("Total Bill Including Tip: " + formattedTotalBillTip + '\n');
+        System.out.println("Amount of Tip per Person: " + formattedTipPerPerson + '\n');
+        System.out.println("Total Bill with Tip per person: " + formattedTotalPerPerson);
 
     }
 }
