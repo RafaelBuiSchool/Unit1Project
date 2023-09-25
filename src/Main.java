@@ -33,10 +33,13 @@ public class Main {
         //Final receipt calculations and rounding to correct decimal places
         totalTipAmount = bill * ((double)tipPercentage /100);
         String formattedTotalTipAmount = String.format("$%.2f", totalTipAmount);
+
         totalBillTip = bill + totalTipAmount;
         String formattedTotalBillTip = String.format("$%.2f", totalBillTip);
+
         tipPerPerson = totalTipAmount / numberOfPartyMembers;
         String formattedTipPerPerson = String.format("$%.2f", tipPerPerson);
+
         totalPerPerson = totalBillTip / numberOfPartyMembers;
         String formattedTotalPerPerson = String.format("$%.2f", totalPerPerson);
 
