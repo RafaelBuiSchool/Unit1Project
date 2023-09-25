@@ -11,6 +11,10 @@ public class Main {
         double totalBillTip;
         double tipPerPerson;
         double totalPerPerson;
+        String formattedTotalPerPerson;
+        String formattedTipPerPerson;
+        String formattedTotalBillTip;
+        String formattedTotalTipAmount;
 
         //Collects input data for receipt
         Scanner s = new Scanner(System.in);
@@ -32,18 +36,18 @@ public class Main {
 
         //Final receipt calculations and rounding to correct decimal places
         totalTipAmount = bill * ((double)tipPercentage /100);
-        String formattedTotalTipAmount = String.format("$%.2f", totalTipAmount);
+        formattedTotalTipAmount = String.format("$%.2f", totalTipAmount);
 
         totalBillTip = bill + totalTipAmount;
-        String formattedTotalBillTip = String.format("$%.2f", totalBillTip);
+        formattedTotalBillTip = String.format("$%.2f", totalBillTip);
 
         tipPerPerson = totalTipAmount / numberOfPartyMembers;
-        String formattedTipPerPerson = String.format("$%.2f", tipPerPerson);
+        formattedTipPerPerson = String.format("$%.2f", tipPerPerson);
 
         totalPerPerson = totalBillTip / numberOfPartyMembers;
-        String formattedTotalPerPerson = String.format("$%.2f", totalPerPerson);
+        formattedTotalPerPerson = String.format("$%.2f", totalPerPerson);
 
-        //Receipt/output print]
+        //Receipt/output print
         System.out.println("Based on the data provided, your new receipt is: " );
         System.out.println("_________________________________________________\n");
         System.out.println("Total Tip: " + formattedTotalTipAmount + '\n');
