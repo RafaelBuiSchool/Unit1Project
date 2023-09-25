@@ -53,7 +53,7 @@ public class Main {
         System.out.println("Total Tip: " + formattedTotalTipAmount + '\n');
         System.out.println("Total Bill Including Tip: " + formattedTotalBillTip + '\n');
         System.out.println("Amount of Tip per Person: " + formattedTipPerPerson + '\n');
-        System.out.println("Total Bill with Tip per person: " + formattedTotalPerPerson);
+        System.out.println("Total amount including tip per person: " + formattedTotalPerPerson);
 
     }
 }
